@@ -1,0 +1,18 @@
+name: XOps Flash Challenge #1
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  cheer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Say the magic words
+        run: |
+          echo "XOps is awesome!"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Repo: ${{ github.repository }}"
